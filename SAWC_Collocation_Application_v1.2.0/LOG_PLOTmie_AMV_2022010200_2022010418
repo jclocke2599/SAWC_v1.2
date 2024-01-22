@@ -1,0 +1,414 @@
+Fri Jan 19 21:27:11 UTC 2024
+load python module
+set python_buffered=True
+run python job
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... date START = 2022010200
+... date END = 2022010418
+... input path = /home/jlocke/SAWC_v1.2/index_file/
+... dependent dataset names = Aircraft,AMV_NCEP,Sonde
+... input index file suffix = .drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4,.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4,.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+... output path = /home/jlocke/SAWC_v1.2/plots/
+... archive parent path = /home/jlocke/
+... avg/thin choice = 0
+number of dependent datasets = 3
+----- DATE range: 2022010200-2022010418
+START yyyy=2022,mm=01,dd=02,hour=00
+END   yyyy=2022,mm=01,dd=04,hour=18
+Date to be processed in LOOP   = 20220102
+...Date before = 20220101
+...Date after  = 20220103
+*****Define INDEX FILES
+/opt/miniconda/3.8-s4/lib/python3.8/site-packages/numpy/core/_asarray.py:102: UserWarning: WARNING: missing_value not used since it
+cannot be safely cast to variable data type
+  return array(a, dtype, copy=False, order=order)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010200.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010200.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010200.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010200.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010200.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010200.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220102
+...Date before = 20220101
+...Date after  = 20220103
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010206.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010206.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010206.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010206.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010206.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010206.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220102
+...Date before = 20220101
+...Date after  = 20220103
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010212.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010212.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010212.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010212.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010212.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010212.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220102
+...Date before = 20220101
+...Date after  = 20220103
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010218.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010218.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010218.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010218.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010218.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010218.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220103
+...Date before = 20220102
+...Date after  = 20220104
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010300.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010300.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010300.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010300.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010300.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010300.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220103
+...Date before = 20220102
+...Date after  = 20220104
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010306.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010306.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010306.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010306.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010306.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010306.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220103
+...Date before = 20220102
+...Date after  = 20220104
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010312.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010312.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010312.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010312.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010312.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010312.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220103
+...Date before = 20220102
+...Date after  = 20220104
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010318.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010318.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010318.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010318.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220103.nc
+*****Define DEPENDENT dataset(s)
+WARNING: index file /home/jlocke/SAWC_v1.2/index_file/index.2022010318.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4 does not exist!
+Date to be processed in LOOP   = 20220104
+...Date before = 20220103
+...Date after  = 20220105
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010400.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010400.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010400.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010400.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010400.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010400.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220104
+...Date before = 20220103
+...Date after  = 20220105
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010406.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010406.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010406.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010406.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010406.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010406.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220104
+...Date before = 20220103
+...Date after  = 20220105
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010412.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010412.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010412.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010412.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010412.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010412.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Date to be processed in LOOP   = 20220104
+...Date before = 20220103
+...Date after  = 20220105
+*****Define INDEX FILES
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010418.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010418.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+Collocation Criteria for /home/jlocke/SAWC_v1.2/index_file/index.2022010418.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4:
+... Max time = 60.0 | distance = 100.0 | pressure = 0.04 | height = 1.0
+Read index file
+read_index_file: index file = /home/jlocke/SAWC_v1.2/index_file/index.2022010418.drv_Aeolus_MieCloud_Orig__NoQC.dset1_AMV_NCEP__NoQC.nc4
+read_index_file: load index file
+Set collocation criteria arrays
+*****Define DRIVER dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220104.nc
+*****Define DEPENDENT dataset(s)
+WARNING: index file /home/jlocke/SAWC_v1.2/index_file/index.2022010418.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Sonde__NoQC.nc4 does not exist!
+number of unique DRIVER obs global = 99224
+number of unique DRIVER obs NH = 29864
+number of unique DRIVER obs TR = 36348
+number of unique DRIVER obs SH = 33012
+SUPER-OB (AVERAGE) MATCHES
+***** PLOTS *****
+dset names = ['Aircraft', 'AMV_NCEP', 'Sonde']
+colors per dset = ['red', 'limegreen', 'blue']
+markers per dset = ['^', 'v', 's']
+number of obs matching DRIVER = [ 3954 99748  1235]
+HISTOGRAMS - Global: Stratify by AMV type
+/opt/miniconda/3.8-s4/lib/python3.8/site-packages/numpy/core/_asarray.py:102: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return array(a, dtype, copy=False, order=order)
+HISTOGRAMS - Regional: Stratify by AMV type
+SCATTERPLOTS and TIMESERIES: Stratify by AMV type
+No handles with labels found to put in legend.
+No handles with labels found to put in legend.
+No handles with labels found to put in legend.
+No handles with labels found to put in legend.
+/opt/miniconda/3.8-s4/lib/python3.8/site-packages/numpy/core/_asarray.py:102: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return array(a, dtype, copy=False, order=order)
+MAPS: Stratify by AMV type
+/opt/miniconda/3.8-s4/lib/python3.8/site-packages/numpy/core/_asarray.py:102: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return array(a, dtype, copy=False, order=order)
+Map: Cylindrical Equidistant
+Maps: Orthographic
+... Rotating Globe AMV
+DENSITY SCATTERPLOTS, ZONAL MEANS, and VERT CROSS-SECTIONS: Stratify by AMV type
+... Rotating Globe: Density AMV
+Traceback (most recent call last):
+  File "/home/jlocke/SAWC_v1.2/SAWC_Collocation_Application_v1.2.0/src/MAIN.plotting_code.AMVtypes.py", line 3095, in <module>
+    contour2d_orthomap_rotate(daterange,output_path,outname,drv_count_rotate,"Collocation Count",xaxis,yaxis,xaxisstr,yaxisstr,xname+" matched with "+tname+" "+stname,ssunits,center_lat,level,levunits)
+NameError: name 'xname' is not defined
+Fri Jan 19 21:35:38 UTC 2024

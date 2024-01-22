@@ -1,0 +1,32 @@
+Fri Jan 19 18:04:11 UTC 2024
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,AMV_NCEP
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): AMV_NCEP
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | AMV_NCEP
+Size of dataset 0/0 (AMV_NCEP) = 7599509.0 = 7599509
+Create archive directory
+CALL obs_match_3d
+slurmstepd: error: *** JOB 24670600 ON s4-202-c10 CANCELLED AT 2024-01-19T21:04:20 DUE TO TIME LIMIT ***

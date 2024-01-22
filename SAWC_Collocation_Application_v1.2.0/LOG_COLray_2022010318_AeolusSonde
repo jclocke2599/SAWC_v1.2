@@ -1,0 +1,1606 @@
+Fri Jan 19 18:06:20 UTC 2024
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+CALL obs_match_3d
+/home/jlocke/.conda/envs/SAWC_conda_env/lib/python3.8/site-packages/distributed/worker.py:3373: UserWarning: Large object of size 1.08 MB detected in task graph: 
+  ("('array-17aa7ef4d01d8922a810467d798c0561', 4)",  ... 1a71741a', 4)")
+Consider scattering large objects ahead of time
+with client.scatter to reduce scheduler burden and 
+keep data on workers
+
+    future = client.submit(func, big_data)    # bad
+
+    big_future = client.scatter(big_data)     # good
+    future = client.submit(func, big_future)  # good
+  warnings.warn(
+DEPENDENT dataset(s) parallelized
+Chunk size: 1481
+Maximum allowable matches: 50
+Data ingest completed in  0.02422809600830078  seconds
+CALL match_obs
+Matching algorithm defined in  0.05862760543823242 seconds
+Match computing completed in  165.06163907051086 seconds
+Match lists completed in  11.95696496963501 seconds
+TOTAL FUNCTION TIME:  182.06430053710938 seconds
+Number of matches = 0
+Zero matches found. EXIT PROGRAM
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+/home/jlocke/.conda/envs/SAWC_conda_env/lib/python3.8/contextlib.py:120: UserWarning: Creating scratch directories is taking a surprisingly long time. This is often due to running workers on a network file system. Consider specifying a local-directory to point workers to write scratch data to a local disk.
+  next(self.gen)
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = RayClear
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010318
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Sonde
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Sonde
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010318
+...Date before = 20220102
+...Date after = 20220104
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.RayClear.1day.20220103.nc
+Define dependent datasets
+i=0 | Sonde
+Size of dataset 0/0 (Sonde) = 74043.0 = 74043
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+Fri Jan 19 18:09:26 UTC 2024

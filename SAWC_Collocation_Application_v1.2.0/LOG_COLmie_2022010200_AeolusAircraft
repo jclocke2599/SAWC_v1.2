@@ -1,0 +1,1604 @@
+Fri Jan 19 18:03:42 UTC 2024
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+CALL obs_match_3d
+/home/jlocke/SAWC_v1.2/SAWC_Collocation_Application_v1.2.0/src/match_dependencies.py:989: UserWarning: WARNING: missing_value cannot be safely cast to variable dtype
+  var_out_str.missing_value = var_miss
+/home/jlocke/SAWC_v1.2/SAWC_Collocation_Application_v1.2.0/src/match_dependencies.py:1025: UserWarning: WARNING: missing_value cannot be safely cast to variable dtype
+  var_out.missing_value   = var_miss
+DEPENDENT dataset(s) parallelized
+Chunk size: 3936
+Maximum allowable matches: 50
+Data ingest completed in  0.07961797714233398  seconds
+CALL match_obs
+Matching algorithm defined in  0.050397396087646484 seconds
+Match computing completed in  201.5762379169464 seconds
+Match lists completed in  33.53720498085022 seconds
+TOTAL FUNCTION TIME:  243.90787410736084 seconds
+Number of matches = 7708
+Find matched indices from source data files
+Matches exist for 2022010200! Create output index file:
+... OUTPATH = /home/jlocke/SAWC_v1.2/index_file/
+... OUTFILE = /home/jlocke/SAWC_v1.2/index_file/index.2022010200.drv_Aeolus_MieCloud_Orig__NoQC.dset1_Aircraft__NoQC.nc4
+========== END MAIN PROGRAM ==========
+======================================
+distributed.worker - WARNING - Heartbeat to scheduler failed
+distributed.worker - WARNING - Heartbeat to scheduler failed
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+***** Import Python Modules *****
+========================================
+========== BEGIN MAIN PROGRAM ==========
+CHECK USER INPUT ARGUMENTS:
+... Aeolus wind type = MieCloud
+... qc flags = 0,0
+... AMV QI(s) = 80
+... AMV QI choice(s) = "NO_FC"
+... date IN = 2022010200
+... aeolus dataset type = orig
+... output path = /home/jlocke/SAWC_v1.2/index_file/
+... DIST = 100.0
+... PRES = 0.04
+... TIME = 60.0
+... HGT  = 1.0
+... all dataset names = Aeolus,Aircraft
+... archive parent path = /home/jlocke/
+DRIVER dataset name: Aeolus
+DEPENDENT dataset name(s): Aircraft
+Collocation Criteria: max distance = [100.] km, max pressure difference = [0.04] log10(hPa), max time difference = [60.] minutes, max height difference = [1.] km
+----- DATE being processed = 2022010200
+...Date before = 20220101
+...Date after = 20220103
+Define driver dataset
+read_aeolus: AEOLUS file = /home/jlocke//wind_datasets/aeolus/netcdf/original/2022/01/Aeolus.L2B.MieCloud.1day.20220102.nc
+Define dependent datasets
+i=0 | Aircraft
+Size of dataset 0/0 (Aircraft) = 196794.0 = 196794
+Create archive directory
+========== END MAIN PROGRAM ==========
+======================================
+Fri Jan 19 18:07:59 UTC 2024

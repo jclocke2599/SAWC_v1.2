@@ -1,0 +1,53 @@
+#!/bin/bash
+
+#SBATCH --requeue
+##This specifies that the job will be requeued after a node failure.
+#
+
+###################################################################
+# This script creates each collocation job. It is called in MAINSCRIPT_for__WindCollocation.bash
+#
+# CONTRIBUTORS: Katherine E. Lukens             NOAA/NESDIS/STAR, CISESS at U. of Maryland
+#               Kevin Garrett                   NOAA/NWS/OSTI
+#               Kayo Ide                        U. of Maryland
+#               David Santek                    CIMSS at U. of Wisconsin-Madison
+#               Brett Hoover                    NOAA/NWS/NCEP/EMC, Lynker Technologies
+#               David Huber                     NOAA/NWS/NCEP/EMC, Redline Performance Solutions, LLC
+#               Ross N. Hoffman                 NOAA/NESDIS/STAR, CISESS at U. of Maryland
+#               Hui Liu                         NOAA/NESDIS/STAR, CISESS at U. of Maryland
+#
+###################################################################
+
+# !!!!! USER SHOULD NOT CHANGE ANYTHING BELOW !!!!!
+
+date	#start date/time
+
+module load miniconda/2.7-base
+
+cd ${INDIR}
+source activate SAWC_conda_env
+
+#--------------------------------------------------------------
+# Run matching algorithm
+#	Command line inputs ARG# (after script name):
+#		1. Aeolus (driver) wind type: RayClear, MieCloud
+#               2. QC applied to each dataset? 0=no, 1=yes. Separated by comma "," delimiter
+#               3. If using AMVs, this is the lower limit of AMV QI in %, for QC
+#               4. If using AMVs, this is the choice of QI type to use, for QC
+#               5. Date in YYYYMMDDHH
+#               6. Aeolus dataset type: for non-reprocessed data, use orig (original); for reprocessed files, use baseline number (example: B10)
+#               7. Output directory
+#               8. Collocation distance maximum
+#               9. Collocation pressure difference maximum
+#              10. Collocation time difference maximum
+#              11. Collocation height difference maximum
+#              12. Names of all datasets to use for collocation, separated by comma "," delimiter
+#              13. Archive parent path: path where home archive directory is located
+# 	       14. Maximum number of matches allowed per data point
+# 	       15. Number of processors to use during parallelization
+#              16. Abbreviation of wind-producing center
+
+python3 ${INDIR}${SCRIPT} ${ARG1} ${ARG2} ${ARG3} ${ARG4} ${ARG5} ${ARG6} ${ARG7} ${ARG8} ${ARG9} ${ARG10} ${ARG11} ${ARG12} ${ARG13} ${ARG14} ${ARG15} ${ARG16}
+
+date	#end date/time
+

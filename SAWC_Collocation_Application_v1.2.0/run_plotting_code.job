@@ -1,0 +1,49 @@
+#!/bin/bash
+
+#SBATCH --requeue
+##This specifies that the job will be requeued after a node failure.
+#
+
+###################################################################
+# This script creates each plotting job. It is called in MAINSCRIPT_for__Plotting.bash
+#
+# CONTRIBUTORS: Katherine E. Lukens             NOAA/NESDIS/STAR, CISESS at U. of Maryland
+#               Kevin Garrett                   NOAA/NWS/OSTI
+#               Kayo Ide                        U. of Maryland
+#               David Santek                    CIMSS at U. of Wisconsin-Madison
+#               Brett Hoover                    NOAA/NWS/NCEP/EMC, Lynker Technologies
+#               David Huber                     NOAA/NWS/NCEP/EMC, Redline Performance Solutions, LLC
+#               Ross N. Hoffman                 NOAA/NESDIS/STAR, CISESS at U. of Maryland
+#               Hui Liu                         NOAA/NESDIS/STAR, CISESS at U. of Maryland
+#
+###################################################################
+
+# !!!!! USER SHOULD NOT CHANGE ANYTHING BELOW !!!!!
+
+date	#start date/time
+
+cd ${INDIR}
+echo "load python module"
+module load miniconda/3.8-s4
+
+echo "set python_buffered=True"
+export PYTHONUNBUFFERED=TRUE
+
+#--------------------------------------------------------------
+# Run matching algorithm
+#	Command line inputs ARG# (after script name):
+#		1. Aeolus (driver) wind type: RayClear, MieCloud
+#               2. Start Date in YYYYMMDDHH
+#               3. End Date in YYYYMMDDHH
+#               4. Input directory for index files
+#		5. Input dependent dataset names
+#               6. Input index file suffix
+#               7. Output directory
+#               8. Archive parent path: path where home archive directory is located
+#		9. Choice to super-ob, thin, or plot all matches
+
+echo "run python job"
+python3 ${INDIR}${SCRIPT} ${ARG1} ${ARG2} ${ARG3} ${ARG4} ${ARG5} ${ARG6} ${ARG7} ${ARG8} ${ARG9}
+
+date	#end date/time
+
