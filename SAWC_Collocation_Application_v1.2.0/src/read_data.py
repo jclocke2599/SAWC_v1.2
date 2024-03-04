@@ -285,9 +285,9 @@ def read_aeolus(path_prefix,yyyymmddhh,dateB4,dateA,driver_dset_type,driver_wind
   elif driver_dset_type!='orig':					# Aeolus dataset reprocessed by ESA
     driver_dset_type_str = 'reprocessed/2'+str(driver_dset_type)	# 	Reprocessed with Baseline B10 processor
 
-  tmp_driver_path    = '/wind_datasets/aeolus/netcdf/'+driver_dset_type_str+'/'+yyyy+'/'+mm+'/'
-  tmp_driver_path_B4 = '/wind_datasets/aeolus/netcdf/'+driver_dset_type_str+'/'+yyB4+'/'+mmB4+'/'
-  tmp_driver_path_A  = '/wind_datasets/aeolus/netcdf/'+driver_dset_type_str+'/'+yyA+'/'+mmA+'/'
+  tmp_driver_path    = '/scratch/aeolus-dataset/netcdf/'+driver_dset_type_str+'/'+yyyy+'/'+mm+'/'
+  tmp_driver_path_B4 = '/scratch/aeolus-dataset/netcdf/'+driver_dset_type_str+'/'+yyB4+'/'+mmB4+'/'
+  tmp_driver_path_A  = '/scratch/aeolus-dataset/netcdf/'+driver_dset_type_str+'/'+yyA+'/'+mmA+'/'
 
 
 		# Paths/files
@@ -1310,9 +1310,9 @@ def read_aircraft(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,t
 	#-------------------------------------------------
     	# Define dataset
 
-  tmp_dset1_path    = '/wind_datasets/aircraft/'+yyyy+'/'+mm+'/'+dd+'/'
-  tmp_dset1_path_B4 = '/wind_datasets/aircraft/'+yyB4+'/'+mmB4+'/'+ddB4+'/'
-  tmp_dset1_path_A  = '/wind_datasets/aircraft/'+yyA+'/'+mmA+'/'+ddA+'/'
+  tmp_dset1_path    = '/scratch/atmos-nc-dataset/aircraft/'+yyyy+'/'+mm+'/'+dd+'/'
+  tmp_dset1_path_B4 = '/scratch/atmos-nc-dataset/aircraft/'+yyB4+'/'+mmB4+'/'+ddB4+'/'
+  tmp_dset1_path_A  = '/scratch/atmos-nc-dataset/aircraft/'+yyA+'/'+mmA+'/'+ddA+'/'
 
 		# Path/file
 		# ...Current date
@@ -1945,9 +1945,9 @@ def read_amv_ncep(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,pct,qi_choice,dset
 	#-------------------------------------------------
     	# Define dataset
 
-  tmp_dset2_path    = '/wind_datasets/AMV/'+yyyy+'/'+mm+'/'+dd+'/'
-  tmp_dset2_path_B4 = '/wind_datasets/AMV/'+yyB4+'/'+mmB4+'/'+ddB4+'/'
-  tmp_dset2_path_A  = '/wind_datasets/AMV/'+yyA+'/'+mmA+'/'+ddA+'/'
+  tmp_dset2_path    = '/scratch/atmos-nc-dataset/AMV/'+yyyy+'/'+mm+'/'+dd+'/'
+  tmp_dset2_path_B4 = '/scratch/atmos-nc-dataset/AMV/'+yyB4+'/'+mmB4+'/'+ddB4+'/'
+  tmp_dset2_path_A  = '/scratch/atmos-nc-dataset/AMV/'+yyA+'/'+mmA+'/'+ddA+'/'
 
 		# Path/file
 		# ...Current date
@@ -2478,124 +2478,99 @@ def read_amv_ncep(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,pct,qi_choice,dset
 	# Return variables to MAIN
   return d_lat,d_lon,d_yr,d_mm,d_dy,d_hr,d_mn,d_hgt,d_prs,indexes2,qc_list,dset2_src, d_satname,d_wcm,d_ham,d_spd,d_dir
 
-#===============================================================================================
-# Read Loon stratospheric balloon data
+     
+#===========================================================================================
+# Read DAWN data
 #
-#	INPUTS:
-#		yyyymmddhh .......................... Current date in yyyymmddhh format
-#		bool_qc ......................... Choice to apply Aeolus QC: True=apply QC, False=don't apply QC
+#       INPUTS:
+#               yyyymmdd .......................... Current date in yyyymmdd format
+#               bool_qc ......................... Choice to apply DAWN QC: True=apply QC, False=don't apply QC
 #
-#	OUTPUTS:
-#		d_lat ............................... Latitude in degrees [-90,90]
-#		d_lon ............................... Longitude in degrees [0,360]
-#		d_prs ............................... Pressure in hPa
-#		d_hgt ............................... Height in km
-#		d_yr ................................ Year
-#		d_mm ................................ Month
-#		d_dy ................................ Day
-#		d_hr ................................ Hour
-#		d_mn ................................ Minute
-#		qc_list ............................. List of QC applied (if applicable)
+#       OUTPUTS:
+#               d_lat ............................... Latitude in degrees [-90,90]
+#               d_lon ............................... Longitude in degrees [0,360]
+#               d_prs ............................... Pressure in hPa
+#               d_hgt ............................... Height in km
+#               d_yr ................................ Year
+#               d_mm ................................ Month
+#               d_dy ................................ Day
+#               d_hr ................................ Hour
+#               d_mn ................................ Minute
+#               qc_list ............................. List of QC applied (if applicable)
 #
-def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_diff_max,idxs):
 
-  print("read_loon: bool_qc = "+str(bool_qc))
+def read_DAWN(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_diff_max,idx):
 
-  qc_list = ""			#initialize
+  print("read_DAWN: bool_qc = "+str(bool_qc))
+
+  qc_list = ""                  #initialize
 
   yyyy = yyyymmddhh[0:4]
   mm   = yyyymmddhh[4:6]
   dd   = yyyymmddhh[6:8]
   hour = yyyymmddhh[8:10]
 
-	#-------------------------------------
-        # Find hour limits ... for Aeolus datafiles
+  yyyymmdd = yyyy+mm+dd
 
-  if hour == "00":
-    hB4 = "18"
-    hA  = "06"
-  elif hour == "06":
-    hB4 = "00"
-    hA  = "12"
-  elif hour == "12":
-    hB4 = "06"
-    hA  = "18"
-  elif hour == "18":
-    hB4 = "12"
-    hA  = "00"
+  yyB4 = dateB4[0:4]
+  mmB4 = dateB4[4:6]
+  ddB4 = dateB4[6:8]
 
-  if hour == "00":
-    yyyymmddhhB4 = dateB4+hB4
-    yyB4 = dateB4[0:4]
-    mmB4 = dateB4[4:6]
-    ddB4 = dateB4[6:8]
-  else:
-    yyyymmddhhB4 = yyyy+mm+dd+hB4
-    yyB4 = yyyy
-    mmB4 = mm
-    ddB4 = dd
-    
-  if hour == "18":
-    yyyymmddhhA = dateA+hA
-    yyA  = dateA[0:4]
-    mmA  = dateA[4:6]
-    ddA  = dateA[6:8]
-  else:
-    yyyymmddhhA = yyyy+mm+dd+hA
-    yyA = yyyy
-    mmA = mm
-    ddA = dd
+  yyA  = dateA[0:4]
+  mmA  = dateA[4:6]
+  ddA  = dateA[6:8]
+ 
 
-		# convert 'time_max_diff' to rounded integer
+               # convert 'time_max_diff' to rounded integer
   tqc_time = float(time_diff_max)
   if tqc_time%60 != 0.0:
     qc_time = int(math.ceil(tqc_time/60.0))             # round up to nearest or equal integer hour
   else:
     qc_time = int(tqc_time)
 
-		# convert hour to integer
+                # convert hour to integer
   ihr = int(hour)
 
-		# find integer hours for before/after files for collocation
+                # find integer hours for before/after files for collocation
   if hour == "00":
-    	# 00
+        # 00
     ihrB = 24 - qc_time
     ihrA = ihr + qc_time
   else:
-	# 06,12,18
+        # 06,12,18
     ihrB = ihr - qc_time
     ihrA = ihr + qc_time
 
   del qc_time,tqc_time,ihr
 
-	#-------------------------------------------------
-    	# Define dataset
+        #-------------------------------------------------
+        # Define dataset
+  tmp_dset1_path    = '/home/jlocke/wind_datasets/DAWN/CPEX-CV/'+yyyy+'/'+mm+'/'+dd+'/'
+  tmp_dset1_path_B4 = '/home/jlocke/wind_datasets/DAWN/CPEX-CV/'+yyB4+'/'+mmB4+'/'+ddB4+'/'
+  tmp_dset1_path_A  = '/home/jlocke/wind_datasets/DAWN/CPEX-CV/'+yyA+'/'+mmA+'/'+ddA+'/'
+ 
+                # Path/file
+                # ...Current date
+  dset1_path            = path_prefix+tmp_dset1_path
+  dset1_filename        = 'cpexcv-DAWN_DC8_'+yyyymmdd+'_R0.nc'
+  dset1_file            = dset1_path+dset1_filename
+                # ...Before date
+  dset1_path_B4         = path_prefix+tmp_dset1_path_B4
+  dset1_filename_B4     = 'cpexcv-DAWN_DC8_'+dateB4+'_R0.nc'
+  dset1_file_B4         = dset1_path_B4+dset1_filename_B4
+                # ...After date
+  dset1_path_A          = path_prefix+tmp_dset1_path_A
+  dset1_filename_A      = 'cpexcv-DAWN_DC8_'+dateA+'_R0.nc'
+  dset1_file_A          = dset1_path_A+dset1_filename_A
 
-  tmp_dset1_path    = '/wind_datasets/Loon/'+yyyy+'/'+mm+'/'+dd+'/'
-  tmp_dset1_path_B4 = '/wind_datasets/Loon/'+yyB4+'/'+mmB4+'/'+ddB4+'/'
-  tmp_dset1_path_A  = '/wind_datasets/Loon/'+yyA+'/'+mmA+'/'+ddA+'/'
+                        # initialize flag indicating if dataset exists. 0=yes, 1=no
+  existB = 0            # ... B = date Before current
+  existA = 0            # ... A = date After current
 
-		# Path/file
-		# ...Current date
-  dset1_path   		= path_prefix+tmp_dset1_path
-  dset1_filename 	= 'Loon_'+yyyymmddhh+'.nc4'
-  dset1_file   		= dset1_path+dset1_filename
-  		# ...Before date
-  dset1_path_B4		= path_prefix+tmp_dset1_path_B4
-  dset1_filename_B4 	= 'Loon_'+yyyymmddhhB4+'.nc4'
-  dset1_file_B4		= dset1_path_B4+dset1_filename_B4
-  		# ...After date
-  dset1_path_A		= path_prefix+tmp_dset1_path_A
-  dset1_filename_A 	= 'Loon_'+yyyymmddhhA+'.nc4'
-  dset1_file_A		= dset1_path_A+dset1_filename_A
-
-    			# initialize flag indicating if dataset exists. 0=yes, 1=no
-  existB = 0		# ... B = date Before current
-  existA = 0		# ... A = date After current
   dset1_exists = exists(dset1_file)
   if dset1_exists==False:
     print("ERROR: file "+dset1_file+" does not exist!")
-    sys.exit()							#exit script immediately
+    sys.exit()                                                  #exit script immediately
   dset1_existsB = exists(dset1_file_B4)
   if dset1_existsB==False:
     print("WARNING: 'before' file "+dset1_file_B4+" does not exist!")
@@ -2604,8 +2579,8 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
   if dset1_existsA==False:
     print("WARNING: 'after' file "+dset1_file_A+" does not exist!")
     existA = 1
-    
-		# Path on FTP/web archive server (for output NetCDF only)
+
+                # Path on FTP/web archive server (for output NetCDF only)
   str_dset1_path    = dset1_path
   str_dset1_path_B4 = dset1_path_B4
   str_dset1_path_A  = dset1_path_A
@@ -2614,184 +2589,236 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
   dset1_src += ", "+str_dset1_path+dset1_filename
   dset1_src += ", "+str_dset1_path_A+dset1_filename_A
 
-		# Variable names
-  dset1_lat_var = 'latitude'
-  dset1_lon_var = 'longitude'
-  dset1_prs_var = 'pressure'
-  dset1_yr_var  = 'year'
-  dset1_mm_var  = 'month'
-  dset1_dy_var  = 'day'
-  dset1_hr_var  = 'hour'
-  dset1_mn_var  = 'minute'
-  dset1_hgt_var = 'altitude'
-  
-  dset1_azm_var = 'solar_azimuth_angle'
-  dset1_elv_var = 'solar_elevation_angle'
-  dset1_spd_var = 'wind_speed'
-  dset1_dir_var = 'wind_direction'
-		
-    	#-------------------------------------------------
-  	# Load dataset
-  
-  		#```````````````````````````````````````````````
-  		# CURRENT date
+                # Variable names
+  dset1_lat_var = 'lat'
+  dset1_lon_var = 'lon'
+  dset1_t_var = 'time' ## seconds since yyyymmdd 00:00:00
+  dset1_hgt_var = 'z'
+  dset1_spd_var = 'Wind_Speed'
+  dset1_dir_var = 'Wind_Direction'
+  dset1_LOSspd_var = 'Line_of_Sight_Wind_Speed'
+
+        #-------------------------------------------------
+        # Load dataset
+
+                #```````````````````````````````````````````````
+                # CURRENT date
+
   data_hdl = Dataset(dset1_file)
-
-  ttdset1_lat = np.asarray( data_hdl.variables[dset1_lat_var] )
-  ttdset1_lon = np.asarray( data_hdl.variables[dset1_lon_var] )
-  ttdset1_prs = np.asarray( data_hdl.variables[dset1_prs_var] )
-  ttdset1_yr  = np.asarray( data_hdl.variables[dset1_yr_var]  )
-  ttdset1_mm  = np.asarray( data_hdl.variables[dset1_mm_var]  )
-  ttdset1_dy  = np.asarray( data_hdl.variables[dset1_dy_var]  )
-  ttdset1_hr  = np.asarray( data_hdl.variables[dset1_hr_var]  )
-  ttdset1_mn  = np.asarray( data_hdl.variables[dset1_mn_var]  )
-  ttdset1_hgt = np.asarray( data_hdl.variables[dset1_hgt_var]  )
   
-  ttdset1_azm = np.asarray( data_hdl.variables[dset1_azm_var]  )
-  ttdset1_elv = np.asarray( data_hdl.variables[dset1_elv_var]  )
-  ttdset1_spd = np.asarray( data_hdl.variables[dset1_spd_var]  )
-  ttdset1_dir = np.asarray( data_hdl.variables[dset1_dir_var]  )
-
+  tdC_lat = np.asarray( data_hdl.variables[dset1_lat_var] )
+  tdC_lon = np.asarray( data_hdl.variables[dset1_lon_var] )
+  tdC_t = np.asarray( data_hdl.variables[dset1_t_var] )
+  tdC_hgt = np.asarray( data_hdl.variables[dset1_hgt_var]  )
+  tdC_spdn = np.asarray( data_hdl.variables[dset1_spd_var]  )
+  tdC_dirn = np.asarray( data_hdl.variables[dset1_dir_var]  )
+  tdC_LOSspd = np.asarray( data_hdl.variables[dset1_LOSspd_var]  )
+  
   data_hdl.close()
-
-	# check if arrays are missing and omit them
-  idx = np.where(ttdset1_yr > -999)
   
-  tdC_lat = ttdset1_lat[idx]
-  tdC_lon = ttdset1_lon[idx]
-  tdC_yr  = ttdset1_yr [idx]
-  tdC_mm  = ttdset1_mm [idx]
-  tdC_dy  = ttdset1_dy [idx]
-  tdC_hr  = ttdset1_hr [idx]
-  tdC_mn  = ttdset1_mn [idx]
-  tdC_hgt = ttdset1_hgt[idx]
-  tdC_prs = ttdset1_prs[idx]
-  tdC_azm = ttdset1_azm[idx]
-  tdC_elv = ttdset1_elv[idx]
-  tdC_spd = ttdset1_spd[idx]
-  tdC_dir = ttdset1_dir[idx]
-  del idx
+  tdC_spd = tdC_spdn[1]
+  tdC_dir = tdC_dirn[1]
+
+###### CONVERT TIME ##### time is written in seconds after 00:00:00 on start date
+  tdC_hr = []
+  htm = []
+  td_hr = []
+  for i in tdC_t:              
+   hr = (i/3600)             ### Divide seconds by 3600 to get hours not rounded
+   hr_r = math.ceil(i/3600)  ### Hours rounded
+   left_hr = (hr_r - hr)     ### Whole hours - rounded hours to get leftover -> caluclate min
+   td_hr.append(hr_r)
+   htm.append(left_hr)  
+
+  for x in td_hr:  
+   tdC_hr.append(x-12)
+  tdC_hr = np.array(tdC_hr)
+
+  tdC_mn = []
+  for k in htm: 
+   tdC_m = math.ceil(k*60)  ### using leftover hours * 60 to get min
+   tdC_mn.append(tdC_m)
+  tdC_mn = np.array(tdC_mn) 
+   
+###### Create Year, Day, and Months arrays
+  tdC_yr = []
+  tdC_dy = []
+  tdC_mm = []
+ 
+  for n in tdC_t: 
+   tdC_y = yyyy
+   tdC_d = dd
+   tdC_m = mm 
+   tdC_yr.append(tdC_y)
+   tdC_mm.append(tdC_m)
+   tdC_dy.append(tdC_d)
   
-  del ttdset1_lat,ttdset1_lon,ttdset1_prs,ttdset1_yr,ttdset1_mm,ttdset1_dy,ttdset1_hr,ttdset1_mn,ttdset1_hgt,ttdset1_azm,ttdset1_elv,ttdset1_spd,ttdset1_dir
-
-	# check pressure units and convert to hPa
-  if max(tdC_prs) > 10000.:
-    tdC_prs = tdC_prs/100.
-    
-    	# check height units and convert to km
-  if max(tdC_hgt) > 1000.:
-    tdC_hgt = tdC_hgt/1000.
-
+  tdC_yr = np.array(tdC_yr)
+  tdC_mm = np.array(tdC_mm)
+  tdC_dy = np.array(tdC_dy) 
+   
+##### Create pressure variable 
+#  tdC_prs = [] 
+#  for m in tdC_hgt:
+#   Pr = 101325*(1-2.25577*10**-5*(abs(m)))**5.25588
+#   tdC_prs.append(Pr)
+#  tdC_prs = np.array(tdC_prs, dtype =np.int) 
+ 
+##### check pressure units and convert to hPa
+#  if max(tdC_prs) > 10000.:
+#    tdC_prs = tdC_prs/100.
+ 
   if dsetflag == "dep":
     if existB == 0:
-		#```````````````````````````````````````````````
-  		# BEFORE date
+                #```````````````````````````````````````````````
+                # BEFORE date
       data_hdl = Dataset(dset1_file_B4)
 
-      ttdset1_lat = np.asarray( data_hdl.variables[dset1_lat_var] )
-      ttdset1_lon = np.asarray( data_hdl.variables[dset1_lon_var] )
-      ttdset1_prs = np.asarray( data_hdl.variables[dset1_prs_var] )
-      ttdset1_yr  = np.asarray( data_hdl.variables[dset1_yr_var]  )
-      ttdset1_mm  = np.asarray( data_hdl.variables[dset1_mm_var]  )
-      ttdset1_dy  = np.asarray( data_hdl.variables[dset1_dy_var]  )
-      ttdset1_hr  = np.asarray( data_hdl.variables[dset1_hr_var]  )
-      ttdset1_mn  = np.asarray( data_hdl.variables[dset1_mn_var]  )
-      ttdset1_hgt = np.asarray( data_hdl.variables[dset1_hgt_var]  )
-  
-      ttdset1_azm = np.asarray( data_hdl.variables[dset1_azm_var]  )
-      ttdset1_elv = np.asarray( data_hdl.variables[dset1_elv_var]  )
-      ttdset1_spd = np.asarray( data_hdl.variables[dset1_spd_var]  )
-      ttdset1_dir = np.asarray( data_hdl.variables[dset1_dir_var]  )
+      tdB_lat = np.asarray( data_hdl.variables[dset1_lat_var] )
+      tdB_lon = np.asarray( data_hdl.variables[dset1_lon_var] )
+      tdB_t = np.asarray( data_hdl.variables[dset1_t_var] )
+      tdB_hgt = np.asarray( data_hdl.variables[dset1_hgt_var]  )
+      tdB_spdn = np.asarray( data_hdl.variables[dset1_spd_var]  )
+      tdB_dirn= np.asarray( data_hdl.variables[dset1_dir_var]  )
+      tdB_LOSspd = np.asarray( data_hdl.variables[dset1_LOSspd_var]  )
 
       data_hdl.close()
 
-	# check if arrays are missing and omit them
-      idx = np.where(ttdset1_yr > -999)
+      tdB_spd = tdB_spdn[1]
+      tdB_dir = tdB_dirn[1]
+###### CONVERT TIME ##### time is written in seconds after 00:00:00 on start date
+      tdB_hr = []
+      htmB = []
+      td_hrB = []
+      for i in tdB_t:
+       hrB = (i/3600)             ### Divide seconds by 3600 to get hours not rounded
+       hr_rB = math.ceil(i/3600)  ### Hours rounded
+       left_hrB = (hr_rB - hrB)     ### Whole hours - rounded hours to get leftover -> caluclate min
+       td_hrB.append(hr_rB)
+       htmB.append(left_hrB)
+ 
+      for x in td_hrB:
+       tdB_hr.append(x-12)
+      tdB_hr = np.array(tdB_hr)
+
+      tdB_mn = []
+      for k in htmB:
+       tdB_m = math.ceil(k*60)  ### using leftover hours * 60 to get min
+       tdB_mn.append(tdB_m)
+      tdB_mn = np.array(tdB_mn)
+
+###### Create Year, Day, and Months arrays
+      tdB_yr = []
+      tdB_dy = []
+      tdB_mm = []
+
+      for n in tdB_t:
+       tdB_y = yyB4
+       tdB_d = ddB4
+       tdB_m = mmB4
+       tdB_yr.append(tdB_y)
+       tdB_mm.append(tdB_m)
+       tdB_dy.append(tdB_d)
+
+      tdB_yr = np.array(tdB_yr)
+      tdB_mm = np.array(tdB_mm)
+      tdB_dy = np.array(tdB_dy)
+
+##### Create pressure variable
+#      tdB_prs = []
+#      for m in tdB_hgt:
+#       PrB = 101325*(1-2.25577*10**-5*(abs(m)))**5.25588
+#       tdB_prs.append(PrB)
+#      tdB_prs = np.array(tdB_prs, dtype =np.int)
+#
+##### check pressure units and convert to hPa
+#      if max(tdB_prs) > 10000.:
+#       tdB_prs = tdB_prs/100.
   
-      tdB_lat = ttdset1_lat[idx]
-      tdB_lon = ttdset1_lon[idx]
-      tdB_yr  = ttdset1_yr [idx]
-      tdB_mm  = ttdset1_mm [idx]
-      tdB_dy  = ttdset1_dy [idx]
-      tdB_hr  = ttdset1_hr [idx]
-      tdB_mn  = ttdset1_mn [idx]
-      tdB_hgt = ttdset1_hgt[idx]
-      tdB_prs = ttdset1_prs[idx]
-      tdB_azm = ttdset1_azm[idx]
-      tdB_elv = ttdset1_elv[idx]
-      tdB_spd = ttdset1_spd[idx]
-      tdB_dir = ttdset1_dir[idx]
-      del idx
-
-      del ttdset1_lat,ttdset1_lon,ttdset1_prs,ttdset1_yr,ttdset1_mm,ttdset1_dy,ttdset1_hr,ttdset1_mn,ttdset1_hgt,ttdset1_azm,ttdset1_elv,ttdset1_spd,ttdset1_dir
-
-	# check pressure units and convert to hPa
-      if max(tdB_prs) > 10000.:
-        tdB_prs = tdB_prs/100.
-    
-    	# check height units and convert to km
-      if max(tdB_hgt) > 1000.:
-        tdB_hgt = tdB_hgt/1000.
-    
     if existA == 0:
-    		#```````````````````````````````````````````````
-  		# AFTER date
+
+                #```````````````````````````````````````````````
+                # AFTER date
       data_hdl = Dataset(dset1_file_A)
 
-      ttdset1_lat = np.asarray( data_hdl.variables[dset1_lat_var] )
-      ttdset1_lon = np.asarray( data_hdl.variables[dset1_lon_var] )
-      ttdset1_prs = np.asarray( data_hdl.variables[dset1_prs_var] )
-      ttdset1_yr  = np.asarray( data_hdl.variables[dset1_yr_var]  )
-      ttdset1_mm  = np.asarray( data_hdl.variables[dset1_mm_var]  )
-      ttdset1_dy  = np.asarray( data_hdl.variables[dset1_dy_var]  )
-      ttdset1_hr  = np.asarray( data_hdl.variables[dset1_hr_var]  )
-      ttdset1_mn  = np.asarray( data_hdl.variables[dset1_mn_var]  )
-      ttdset1_hgt = np.asarray( data_hdl.variables[dset1_hgt_var]  )
-  
-      ttdset1_azm = np.asarray( data_hdl.variables[dset1_azm_var]  )
-      ttdset1_elv = np.asarray( data_hdl.variables[dset1_elv_var]  )
-      ttdset1_spd = np.asarray( data_hdl.variables[dset1_spd_var]  )
-      ttdset1_dir = np.asarray( data_hdl.variables[dset1_dir_var]  )
+ 
+      tdA_lat = np.asarray( data_hdl.variables[dset1_lat_var] )
+      tdA_lon = np.asarray( data_hdl.variables[dset1_lon_var] )
+      tdA_t = np.asarray( data_hdl.variables[dset1_t_var] )
+      tdA_hgt = np.asarray( data_hdl.variables[dset1_hgt_var]  )
+      tdA_spdn = np.asarray( data_hdl.variables[dset1_spd_var]  )
+      tdA_dirn = np.asarray( data_hdl.variables[dset1_dir_var]  )
+      tdA_LOSspd = np.asarray( data_hdl.variables[dset1_LOSspd_var]  )
 
       data_hdl.close()
+    
+      tdA_spd = tdA_spdn[1]
+      tdA_dir = tdA_dirn[1]  
+###### CONVERT TIME ##### time is written in seconds after 00:00:00 on start date
+      tdA_hr = []
+      htmA = []
+      td_hrA = []
+      for i in tdA_t:
+       hrA = (i/3600)             ### Divide seconds by 3600 to get hours not rounded
+       hr_rA = math.ceil(i/3600)  ### Hours rounded
+       left_hrA = (hr_rA - hrA)     ### Whole hours - rounded hours to get leftover -> caluclate min
+       td_hrA.append(hr_rA)
+       htmA.append(left_hrA)
+     
 
-          # check if arrays are missing and omit them
-      idx = np.where(ttdset1_yr > -999)
+      for x in td_hrA:
+       tdA_hr.append(x-12)
+      tdA_hr = np.array(tdA_hr)
   
-      tdA_lat = ttdset1_lat[idx]
-      tdA_lon = ttdset1_lon[idx]
-      tdA_yr  = ttdset1_yr [idx]
-      tdA_mm  = ttdset1_mm [idx]
-      tdA_dy  = ttdset1_dy [idx]
-      tdA_hr  = ttdset1_hr [idx]
-      tdA_mn  = ttdset1_mn [idx]
-      tdA_hgt = ttdset1_hgt[idx]
-      tdA_prs = ttdset1_prs[idx]
-      tdA_azm = ttdset1_azm[idx]
-      tdA_elv = ttdset1_elv[idx]
-      tdA_spd = ttdset1_spd[idx]
-      tdA_dir = ttdset1_dir[idx]
-      del idx
+      tdA_mn = []
+      for k in htmA:
+       tdA_m = math.ceil(k*60)  ### using leftover hours * 60 to get min
+       tdA_mn.append(tdA_m)
+      tdA_mn = np.array(tdA_mn)
 
-      del ttdset1_lat,ttdset1_lon,ttdset1_prs,ttdset1_yr,ttdset1_mm,ttdset1_dy,ttdset1_hr,ttdset1_mn,ttdset1_hgt,ttdset1_azm,ttdset1_elv,ttdset1_spd,ttdset1_dir
+###### Create Year, Day, and Months arrays
+      tdA_yr = []
+      tdA_dy = []
+      tdA_mm = []
 
-          # check pressure units and convert to hPa
-      if max(tdA_prs) > 10000.:
-        tdA_prs = tdA_prs/100.
-    
-          # check height units and convert to km
-      if max(tdA_hgt) > 1000.:
-        tdA_hgt = tdA_hgt/1000.
-    
-	#-------------------------------------------------
-      	# Append current arrays to before date arrays
+      for n in tdA_t:
+       tdA_y = yyA
+       tdA_d = ddA
+       tdA_m = mmA
+       tdA_yr.append(tdA_y)
+       tdA_mm.append(tdA_m)
+       tdA_dy.append(tdA_d)
 
-		# get BEFORE and AFTER obs
+      tdA_yr = np.array(tdA_yr)
+      tdA_mm = np.array(tdA_mm)
+      tdA_dy = np.array(tdA_dy)
+      
+##### Create pressure variable
+#      tdA_prs = []
+#      #tdA_hgt.resize((0,g))
+#      for m in tdA_hgt:
+#       PrA = 101325*(1-2.25577*10**-5*(abs(m)))**5.25588
+#       tdA_prs.append(PrA)
+#      tdA_prs = np.array(tdA_prs, dtype =np.int)
+   
+##### check pressure units and convert to hPa
+#      if max(tdA_prs) > 10000.:
+#       tdA_prs = tdA_prs/100.
+  
+        #-------------------------------------------------
+        # Append current arrays to before date arrays
+
+                # get BEFORE and AFTER obs
     if hour=="00":
-    	# keep ihrB hrs before CURRENT and ihrA hrs after CURRENT 6hrs
+        # keep ihrB hrs before CURRENT and ihrA hrs after CURRENT 6hrs
       tiHHA  = np.where(((tdC_hr >= 3) * (tdC_hr < (3+ihrA))))
       siHHA  = np.asarray(tiHHA)
       iHHA   = siHHA.flatten()
+      iHHA.resize((434))
+
+      ihhA = np.copy(iHHA)
+      ihhA = np.array(ihhA)
+      ihhA.resize((401))
 
       stdA_lat = tdC_lat[iHHA]
       stdA_lon = tdC_lon[iHHA]
@@ -2800,18 +2827,24 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
       stdA_dy  = tdC_dy [iHHA]
       stdA_hr  = tdC_hr [iHHA]
       stdA_mn  = tdC_mn [iHHA]
-      stdA_spd = tdC_spd[iHHA]
-      stdA_dir = tdC_dir[iHHA]
-      stdA_prs = tdC_prs[iHHA]
-      stdA_hgt = tdC_hgt[iHHA]
-      stdA_azm = tdC_azm[iHHA]
-      stdA_elv = tdC_elv[iHHA]
-	
+      stdA_spd = tdC_spd[ihhA]
+      stdA_dir = tdC_dir[ihhA]
+#      stdA_prs = tdC_prs[ihhA]
+      stdA_hgt = tdC_hgt[ihhA]
+#      stdA_azm = tdC_azm[iHHA]
+#      stdA_elv = tdC_elv[iHHA]
+ 
       if existB == 0:
         tiHHB4 = np.where(((tdB_hr >= (21-ihrB)) * (tdB_hr < 21)))
         siHHB4 = np.asarray(tiHHB4)
         iHHB4  = siHHB4.flatten()
-	
+        iHHB4.resize((434))
+         
+        ihhB4 = np.copy(iHHB4)
+        ihhB4 = np.array(ihhB4)
+        ihhB4.resize((401))
+     
+ 
         stdB_lat = tdB_lat[iHHB4]
         stdB_lon = tdB_lon[iHHB4]
         stdB_yr  = tdB_yr [iHHB4]
@@ -2819,19 +2852,24 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
         stdB_dy  = tdB_dy [iHHB4]
         stdB_hr  = tdB_hr [iHHB4]
         stdB_mn  = tdB_mn [iHHB4]
-        stdB_spd = tdB_spd[iHHB4]
+        stdB_spd = tdB_spd[ihhB4]
         stdB_dir = tdB_dir[iHHB4]
-        stdB_prs = tdB_prs[iHHB4]
-        stdB_hgt = tdB_hgt[iHHB4]
-        stdB_azm = tdB_azm[iHHB4]
-        stdB_elv = tdB_elv[iHHB4]
-	
+#        stdB_prs = tdB_prs[ihhB4]
+        stdB_hgt = tdB_hgt[ihhB4]
+#        stdB_azm = tdB_azm[iHHB4]
+#        stdB_elv = tdB_elv[iHHB4]
+       
     elif hour=="06":
-    	# keep ihrB before CURRENT and ihrA after CURRENT 6hrs
+        # keep ihrB before CURRENT and ihrA after CURRENT 6hrs
       tiHHA   = np.where(((tdC_hr >= 9) * (tdC_hr < (9+ihrA))))
       siHHA   = np.asarray(tiHHA)
       iHHA    = siHHA.flatten()
-      
+      iHHA.resize((434))
+
+      ihhA = np.copy(iHHA)
+      ihhA = np.array(ihhA)
+      ihhA.resize((401))
+
       stdA_lat = tdC_lat[iHHA]
       stdA_lon = tdC_lon[iHHA]
       stdA_yr  = tdC_yr [iHHA]
@@ -2839,25 +2877,35 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
       stdA_dy  = tdC_dy [iHHA]
       stdA_hr  = tdC_hr [iHHA]
       stdA_mn  = tdC_mn [iHHA]
-      stdA_spd = tdC_spd[iHHA]
+      stdA_spd = tdC_spd[ihhA]
       stdA_dir = tdC_dir[iHHA]
-      stdA_prs = tdC_prs[iHHA]
-      stdA_hgt = tdC_hgt[iHHA]
-      stdA_azm = tdC_azm[iHHA]
-      stdA_elv = tdC_elv[iHHA]
-      
+#      stdA_prs = tdC_prs[ihhA]
+      stdA_hgt = tdC_hgt[ihhA]
+#      stdA_azm = tdC_azm[iHHA]
+#      stdA_elv = tdC_elv[iHHA]
+
       if (3-ihrB) < 0:
         dhrB = abs(3 - ihrB)
-      
+
         tiHHB4 = np.where(((tdC_hr >= 0) * (tdC_hr < 3)))
         siHHB4 = np.asarray(tiHHB4)
         iHHB4  = siHHB4.flatten()
-      
+        iHHB4.resize((434))
+
+        ihhB4 = np.copy(iHHB4)
+        ihhB4 = np.array(ihhB4)
+        ihhB4.resize((401))
+
         if existB == 0:
-          tiHHB41 = np.where(((tdB_hr >= (24-dhrB)) * (tdB_hr < 24)))  
+          tiHHB41 = np.where(((tdB_hr >= (24-dhrB)) * (tdB_hr < 24)))
           siHHB41 = np.asarray(tiHHB41)
           iHHB41  = siHHB41.flatten()
-	  
+          iHHB41.resize((434))
+          
+          ihhB41 = np.copy(iHHB41)
+          ihhB41 = np.array(ihhB41)
+          ihhB41.resize((401))
+
           stdB_lat = np.append(tdB_lat[iHHB41], tdC_lat[iHHB4], axis=0)
           stdB_lon = np.append(tdB_lon[iHHB41], tdC_lon[iHHB4], axis=0)
           stdB_yr  = np.append(tdB_yr [iHHB41], tdC_yr [iHHB4], axis=0)
@@ -2865,12 +2913,12 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
           stdB_dy  = np.append(tdB_dy [iHHB41], tdC_dy [iHHB4], axis=0)
           stdB_hr  = np.append(tdB_hr [iHHB41], tdC_hr [iHHB4], axis=0)
           stdB_mn  = np.append(tdB_mn [iHHB41], tdC_mn [iHHB4], axis=0)
-          stdB_spd = np.append(tdB_spd[iHHB41], tdC_spd[iHHB4], axis=0)
+          stdB_spd = np.append(tdB_spd[ihhB41], tdC_spd[ihhB4], axis=0)
           stdB_dir = np.append(tdB_dir[iHHB41], tdC_dir[iHHB4], axis=0)
-          stdB_prs = np.append(tdB_prs[iHHB41], tdC_prs[iHHB4], axis=0)
-          stdB_hgt = np.append(tdB_hgt[iHHB41], tdC_hgt[iHHB4], axis=0)
-          stdB_azm = np.append(tdB_azm[iHHB41], tdC_azm[iHHB4], axis=0)
-          stdB_elv = np.append(tdB_elv[iHHB41], tdC_elv[iHHB4], axis=0)
+#          stdB_prs = np.append(tdB_prs[ihhB41], tdC_prs[ihhB4], axis=0)
+          stdB_hgt = np.append(tdB_hgt[ihhB41], tdC_hgt[ihhB4], axis=0)
+#         stdB_azm = np.append(tdB_azm[iHHB41], tdC_azm[iHHB4], axis=0)
+#         stdB_elv = np.append(tdB_elv[iHHB41], tdC_elv[iHHB4], axis=0)
         else:
           stdB_lat = tdC_lat[iHHB4]
           stdB_lon = tdC_lon[iHHB4]
@@ -2879,20 +2927,25 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
           stdB_dy  = tdC_dy [iHHB4]
           stdB_hr  = tdC_hr [iHHB4]
           stdB_mn  = tdC_mn [iHHB4]
-          stdB_spd = tdC_spd[iHHB4]
+          stdB_spd = tdC_spd[ihhB4]
           stdB_dir = tdC_dir[iHHB4]
-          stdB_prs = tdC_prs[iHHB4]
-          stdB_hgt = tdC_hgt[iHHB4]
-          stdB_azm = tdC_azm[iHHB4]
-          stdB_elv = tdC_elv[iHHB4]
+#          stdB_prs = tdC_prs[ihhB4]
+          stdB_hgt = tdC_hgt[ihhB4]
+#          stdB_azm = tdC_azm[iHHB4]
+#          stdB_elv = tdC_elv[iHHB4]
 
         del dhrB
-	
+
       else:
         tiHHB4 = np.where(((tdC_hr >= (3-ihrB)) * (tdC_hr < 3)))
         siHHB4 = np.asarray(tiHHB4)
         iHHB4  = siHHB4.flatten()
-	
+        iHHB4.resize((434))
+      
+        ihhB4 = np.copy(iHHB4)
+        ihhB4 = np.array(ihhB4)
+        ihhB4.resize((401))
+
         stdB_lat = tdC_lat[iHHB4]
         stdB_lon = tdC_lon[iHHB4]
         stdB_yr  = tdC_yr [iHHB4]
@@ -2900,23 +2953,33 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
         stdB_dy  = tdC_dy [iHHB4]
         stdB_hr  = tdC_hr [iHHB4]
         stdB_mn  = tdC_mn [iHHB4]
-        stdB_spd = tdC_spd[iHHB4]
+        stdB_spd = tdC_spd[ihhB4]
         stdB_dir = tdC_dir[iHHB4]
-        stdB_prs = tdC_prs[iHHB4]
-        stdB_hgt = tdC_hgt[iHHB4]
-        stdB_azm = tdC_azm[iHHB4]
-        stdB_elv = tdC_elv[iHHB4]
-	
+ #       stdB_prs = tdC_prs[ihhB4]
+        stdB_hgt = tdC_hgt[ihhB4]
+#        stdB_azm = tdC_azm[iHHB4]
+#        stdB_elv = tdC_elv[iHHB4]
+
     elif hour=="12":
-    	# keep ihrB before CURRENT and ihrA after CURRENT 6hrs
-      tiHHA  = np.where(((tdC_hr >= 15) * (tdC_hr < (15+ihrA)))) 
+        # keep ihrB before CURRENT and ihrA after CURRENT 6hrs
+      tiHHA  = np.where(((tdC_hr >= 15) * (tdC_hr < (15+ihrA))))
       tiHHB4 = np.where(((tdC_hr >= (9-ihrB)) * (tdC_hr < 9)))
-    
       siHHA  = np.asarray(tiHHA)
       iHHA   = siHHA.flatten()
       siHHB4 = np.asarray(tiHHB4)
       iHHB4  = siHHB4.flatten()
-      
+
+      iHHB4.resize((434))
+      iHHA.resize((434))
+
+      ihhB4 = np.copy(iHHB4)
+      ihhB4 = np.array(ihhB4)
+      ihhB4.resize((401))
+
+      ihhA = np.copy(iHHA)
+      ihhA = np.array(ihhA)
+      ihhA.resize((401))
+    
       stdA_lat = tdC_lat[iHHA]
       stdA_lon = tdC_lon[iHHA]
       stdA_yr  = tdC_yr [iHHA]
@@ -2924,13 +2987,13 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
       stdA_dy  = tdC_dy [iHHA]
       stdA_hr  = tdC_hr [iHHA]
       stdA_mn  = tdC_mn [iHHA]
-      stdA_spd = tdC_spd[iHHA]
+      stdA_spd = tdC_spd[ihhA]
       stdA_dir = tdC_dir[iHHA]
-      stdA_prs = tdC_prs[iHHA]
-      stdA_hgt = tdC_hgt[iHHA]
-      stdA_azm = tdC_azm[iHHA]
-      stdA_elv = tdC_elv[iHHA]
-      
+#      stdA_prs = tdC_prs[ihhA]
+      stdA_hgt = tdC_hgt[ihhA]
+#      stdA_azm = tdC_azm[iHHA]
+#      stdA_elv = tdC_elv[iHHA]
+
       stdB_lat = tdC_lat[iHHB4]
       stdB_lon = tdC_lon[iHHB4]
       stdB_yr  = tdC_yr [iHHB4]
@@ -2938,59 +3001,73 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
       stdB_dy  = tdC_dy [iHHB4]
       stdB_hr  = tdC_hr [iHHB4]
       stdB_mn  = tdC_mn [iHHB4]
-      stdB_spd = tdC_spd[iHHB4]
+      stdB_spd = tdC_spd[ihhB4]
       stdB_dir = tdC_dir[iHHB4]
-      stdB_prs = tdC_prs[iHHB4]
-      stdB_hgt = tdC_hgt[iHHB4]
-      stdB_azm = tdC_azm[iHHB4]
-      stdB_elv = tdC_elv[iHHB4]
-    
+#      stdB_prs = tdC_prs[ihhB4]
+      stdB_hgt = tdC_hgt[ihhB4]
+#      stdB_azm = tdC_azm[iHHB4]
+#      stdB_elv = tdC_elv[iHHB4]
     elif hour=="18":
-    	# keep ihrB before CURRENT and ihrA after CURRENT 6hrs
+        # keep ihrB before CURRENT and ihrA after CURRENT 6hrs
       if (21+ihrA) >= 24:
         dhrA = abs(24 - (21 + ihrA))
-
+ 
         tiHHA = np.where(((tdC_hr >= 21) * (tdC_hr < 24)))
         siHHA = np.asarray(tiHHA)
         iHHA  = siHHA.flatten()
-      
+        iHHA.resize((434))
+ 
+        ihhA = np.copy(iHHA)
+        ihhA = np.array(ihhA)
+        ihhA.resize((401))
+
         if existA == 0:
-          tiHHA2 = np.where(((tdA_hr >= 0) * (tdA_hr < dhrA)))  
-          siHHA2 = np.asarray(tiHHA2)
-          iHHA2  = siHHA2.flatten()
-	  
-          stdA_lat = np.append(tdC_lat[iHHA], tdA_lat[iHHA2], axis=0)
-          stdA_lon = np.append(tdC_lon[iHHA], tdA_lon[iHHA2], axis=0)
-          stdA_yr  = np.append(tdC_yr [iHHA], tdA_yr [iHHA2], axis=0)
-          stdA_mm  = np.append(tdC_mm [iHHA], tdA_mm [iHHA2], axis=0)
-          stdA_dy  = np.append(tdC_dy [iHHA], tdA_dy [iHHA2], axis=0)
-          stdA_hr  = np.append(tdC_hr [iHHA], tdA_hr [iHHA2], axis=0)
-          stdA_mn  = np.append(tdC_mn [iHHA], tdA_mn [iHHA2], axis=0)
-          stdA_spd = np.append(tdC_spd[iHHA], tdA_spd[iHHA2], axis=0)
-          stdA_dir = np.append(tdC_dir[iHHA], tdA_dir[iHHA2], axis=0)
-          stdA_prs = np.append(tdC_prs[iHHA], tdA_prs[iHHA2], axis=0)
-          stdA_hgt = np.append(tdC_hgt[iHHA], tdA_hgt[iHHA2], axis=0)
-          stdA_azm = np.append(tdC_azm[iHHA], tdA_azm[iHHA2], axis=0)
-          stdA_elv = np.append(tdC_elv[iHHA], tdA_elv[iHHA2], axis=0)
-        else:
+         tiHHA2 = np.where(((tdA_hr >= 0) * (tdA_hr < dhrA)))
+         siHHA2 = np.asarray(tiHHA2)
+         iHHA2  = siHHA2.flatten()
+         iHHA2.resize((434))
+  
+         ihhA2 = np.copy(iHHA2)
+         ihhA2 = np.array(ihhA2)
+         ihhA2.resize((401))
+  
+         stdA_lat = np.append(tdC_lat[iHHA], tdA_lat[iHHA2], axis=0) 
+         stdA_lon = np.append(tdC_lon[iHHA], tdA_lon[iHHA2], axis=0)
+         stdA_yr  = np.append(tdC_yr [iHHA], tdA_yr [iHHA2], axis=0)
+         stdA_mm  = np.append(tdC_mm [iHHA], tdA_mm [iHHA2], axis=0)
+         stdA_dy  = np.append(tdC_dy [iHHA], tdA_dy [iHHA2], axis=0)
+         stdA_hr  = np.append(tdC_hr [iHHA], tdA_hr [iHHA2], axis=0)
+         stdA_mn  = np.append(tdC_mn [iHHA], tdA_mn [iHHA2], axis=0)
+         stdA_spd = np.append(tdC_spd[ihhA], tdA_spd[ihhA2], axis=0)
+         stdA_dir = np.append(tdC_dir[iHHA], tdA_dir[iHHA2], axis=0)
+ #        stdA_prs = np.append(tdC_prs[ihhA], tdA_prs[ihhA2], axis=0)
+         stdA_hgt = np.append(tdC_hgt[ihhA], tdA_hgt[ihhA2], axis=0)
+#        stdA_azm = np.append(tdC_azm[iHHA], tdA_azm[iHHA2], axis=0)
+#        stdA_elv = np.append(tdC_elv[iHHA], tdA_elv[iHHA2], axis=0)
+      else:
           stdA_lat = tdC_lat[iHHA]
-          stdA_lon = tdC_lon[iHHA]
+          stdA_lon = tdC_lon[iHHA] 
           stdA_yr  = tdC_yr [iHHA]
           stdA_mm  = tdC_mm [iHHA]
           stdA_dy  = tdC_dy [iHHA]
           stdA_hr  = tdC_hr [iHHA]
           stdA_mn  = tdC_mn [iHHA]
-          stdA_spd = tdC_spd[iHHA]
+          stdA_spd = tdC_spd[ihhA]
           stdA_dir = tdC_dir[iHHA]
-          stdA_prs = tdC_prs[iHHA]
-          stdA_hgt = tdC_hgt[iHHA]
-          stdA_azm = tdC_azm[iHHA]
-          stdA_elv = tdC_elv[iHHA]
-      
-      tiHHB4 = np.where(((tdC_hr >= (15-ihrB)) * (tdC_hr < 15)))
+#          stdA_prs = tdC_prs[ihhA]
+          stdA_hgt = tdC_hgt[ihhA]
+#         stdA_azm = tdC_azm[iHHA]
+#         stdA_elv = tdC_elv[iHHA]
+
+      tiHHB4 = np.where(((tdC_hr >= (15-ihrB)) * (tdC_hr < 15)))   
       siHHB4 = np.asarray(tiHHB4)
       iHHB4  = siHHB4.flatten()
-    
+      iHHB4.resize((434))
+
+      ihhB4 = np.copy(iHHB4)
+      ihhB4 = np.array(ihhB4)
+      ihhB4.resize((401))
+
       stdB_lat = tdC_lat[iHHB4]
       stdB_lon = tdC_lon[iHHB4]
       stdB_yr  = tdC_yr [iHHB4]
@@ -2998,14 +3075,14 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
       stdB_dy  = tdC_dy [iHHB4]
       stdB_hr  = tdC_hr [iHHB4]
       stdB_mn  = tdC_mn [iHHB4]
-      stdB_spd = tdC_spd[iHHB4]
+      stdB_spd = tdC_spd[ihhB4]
       stdB_dir = tdC_dir[iHHB4]
-      stdB_prs = tdC_prs[iHHB4]
-      stdB_hgt = tdC_hgt[iHHB4]
-      stdB_azm = tdC_azm[iHHB4]
-      stdB_elv = tdC_elv[iHHB4]
-
-      		# append CURRENT to BEFORE
+#     stdB_prs = tdC_prs[ihhB4]
+      stdB_hgt = tdC_hgt[ihhB4]
+#     stdB_azm = tdC_azm[iHHB4]
+#     stdB_elv = tdC_elv[iHHB4]
+  
+              # append CURRENT to BEFORE
     if existB == 0:
       tdset1_lat = np.append(stdB_lat,tdC_lat,axis=0)
       tdset1_lon = np.append(stdB_lon,tdC_lon,axis=0)
@@ -3015,27 +3092,27 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
       tdset1_hr  = np.append(stdB_hr ,tdC_hr ,axis=0)
       tdset1_mn  = np.append(stdB_mn ,tdC_mn ,axis=0)
       tdset1_hgt = np.append(stdB_hgt,tdC_hgt,axis=0)
-      tdset1_prs = np.append(stdB_prs,tdC_prs,axis=0)
-      tdset1_azm = np.append(stdB_azm,tdC_azm,axis=0)
-      tdset1_elv = np.append(stdB_elv,tdC_elv,axis=0)
+#      tdset1_prs = np.append(stdB_prs,tdC_prs,axis=0)
+#      tdset1_azm = np.append(stdB_azm,tdC_azm,axis=0)
+#      tdset1_elv = np.append(stdB_elv,tdC_elv,axis=0)
       tdset1_spd = np.append(stdB_spd,tdC_spd,axis=0)
       tdset1_dir = np.append(stdB_dir,tdC_dir,axis=0)
     else:
       tdset1_lat = tdC_lat
       tdset1_lon = tdC_lon
-      tdset1_yr  = tdC_yr 
-      tdset1_mm  = tdC_mm 
-      tdset1_dy  = tdC_dy 
-      tdset1_hr  = tdC_hr 
-      tdset1_mn  = tdC_mn 
+      tdset1_yr  = tdC_yr
+      tdset1_mm  = tdC_mm
+      tdset1_dy  = tdC_dy
+      tdset1_hr  = tdC_hr
+      tdset1_mn  = tdC_mn
       tdset1_hgt = tdC_hgt
-      tdset1_prs = tdC_prs
-      tdset1_azm = tdC_azm
-      tdset1_elv = tdC_elv
+#      tdset1_prs = tdC_prs
+#      tdset1_azm = tdC_azm
+#      tdset1_elv = tdC_elv
       tdset1_spd = tdC_spd
       tdset1_dir = tdC_dir
 
-  		# append AFTER to CURRENT
+                # append AFTER to CURRENT
     if existA == 0:
       tdset1_lat = np.append(tdset1_lat,stdA_lat,axis=0)
       tdset1_lon = np.append(tdset1_lon,stdA_lon,axis=0)
@@ -3045,54 +3122,54 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
       tdset1_hr  = np.append(tdset1_hr ,stdA_hr ,axis=0)
       tdset1_mn  = np.append(tdset1_mn ,stdA_mn ,axis=0)
       tdset1_hgt = np.append(tdset1_hgt,stdA_hgt,axis=0)
-      tdset1_prs = np.append(tdset1_prs,stdA_prs,axis=0)
-      tdset1_azm = np.append(tdset1_azm,stdA_azm,axis=0)
-      tdset1_elv = np.append(tdset1_elv,stdA_elv,axis=0)
+ #     tdset1_prs = np.append(tdset1_prs,stdA_prs,axis=0)
+#      tdset1_azm = np.append(tdset1_azm,stdA_azm,axis=0)
+#      tdset1_elv = np.append(tdset1_elv,stdA_elv,axis=0)
       tdset1_spd = np.append(tdset1_spd,stdA_spd,axis=0)
       tdset1_dir = np.append(tdset1_dir,stdA_dir,axis=0)
 
-  else:
-  	# dsetflag = "drv"
-    tdset1_lat = tdC_lat
-    tdset1_lon = tdC_lon
-    tdset1_yr  = tdC_yr 
-    tdset1_mm  = tdC_mm 
-    tdset1_dy  = tdC_dy 
-    tdset1_hr  = tdC_hr 
-    tdset1_mn  = tdC_mn 
-    tdset1_hgt = tdC_hgt
-    tdset1_prs = tdC_prs
-    tdset1_azm = tdC_azm
-    tdset1_elv = tdC_elv
-    tdset1_spd = tdC_spd
-    tdset1_dir = tdC_dir
+    else:
+        # dsetflag = "drv"
+      tdset1_lat = tdC_lat
+      tdset1_lon = tdC_lon
+      tdset1_yr  = tdC_yr
+      tdset1_mm  = tdC_mm
+      tdset1_dy  = tdC_dy
+      tdset1_hr  = tdC_hr
+      tdset1_mn  = tdC_mn
+      tdset1_hgt = tdC_hgt
+  #    tdset1_prs = tdC_prs
+#     tdset1_azm = tdC_azm
+#     tdset1_elv = tdC_elv
+      tdset1_spd = tdC_spd
+      tdset1_dir = tdC_dir
+      
+        #----------------------------------------
+        # if 'runtype' = 'match', get indices of matches and apply QC if bool_drv_qc=True.
+        # if 'runtype' = 'plot', SKIP bool if-block
 
-	#----------------------------------------
-	# if 'runtype' = 'match', get indices of matches and apply QC if bool_drv_qc=True.
-	# if 'runtype' = 'plot', SKIP bool if-block
-	
   if runtype == "match":
     if bool_qc:
-      print("LOON QC NOT APPLIED: TBA")
+      print("DAWN QC NOT APPLIED: TBA")
     elif not bool_qc:
       # Do not apply LOON QC
 
-      sindexesDC = np.asarray(np.where(tdset1_lat==tdset1_lat))           #get all indices
-      indexes1   = sindexesDC.flatten()
+    #  sindexesDC = np.asarray(np.where(tdset1_hr==tdset1_hr))           #get all indices
+      indexes1   = [0]#sindexesDC.flatten()
 
       qc_list = "No QC applied"
 
       d_lat = tdset1_lat
       d_lon = tdset1_lon
-      d_yr  = tdset1_yr 
-      d_mm  = tdset1_mm 
-      d_dy  = tdset1_dy 
-      d_hr  = tdset1_hr 
-      d_mn  = tdset1_mn  
-      d_prs = tdset1_prs
+      d_yr  = tdset1_yr
+      d_mm  = tdset1_mm
+      d_dy  = tdset1_dy
+      d_hr  = tdset1_hr
+      d_mn  = tdset1_mn
+   
       d_hgt = tdset1_hgt
-      d_azm = tdset1_azm
-      d_elv = tdset1_elv
+#      d_azm = tdset1_azm
+#      d_elv = tdset1_elv
       d_spd = tdset1_spd
       d_dir = tdset1_dir
 
@@ -3109,17 +3186,22 @@ def read_loon(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time_
     d_dy  = tdset1_dy [idxs]
     d_hr  = tdset1_hr [idxs]
     d_mn  = tdset1_mn [idxs]
-    d_prs = tdset1_prs[idxs]
     d_hgt = tdset1_hgt[idxs]
-    d_azm = tdset1_azm[idxs]
-    d_elv = tdset1_elv[idxs]
+#    d_azm = tdset1_azm[idxs]
+#    d_elv = tdset1_elv[idxs]
     d_spd = tdset1_spd[idxs]
     d_dir = tdset1_dir[idxs]
-    
-    	#----------------------------------------
 
-	# Return variables to MAIN
-  return d_lat,d_lon,d_yr,d_mm,d_dy,d_hr,d_mn,d_hgt,d_prs,indexes1,qc_list,dset1_src,d_azm,d_elv,d_spd,d_dir
+        #----------------------------------------
+        #----------------------------------------
+
+        # create height array but fill with missing -999.
+        #       AMV heights not available.
+  d_prs = np.nan * np.ones_like(d_hr)
+  
+  
+          # Return variables to MAIN
+  return d_lat,d_lon,d_mm,d_yr,d_prs,d_dy,d_hr,d_mn,d_hgt,indexes1,qc_list,dset1_src,d_spd,d_dir
 
 #===============================================================================================
 # Read RADIOSONDE (from NCEP)
@@ -3213,9 +3295,9 @@ def read_sonde(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time
 	#-------------------------------------------------
     	# Define dataset
 
-  tmp_dset1_path    = '/wind_datasets/sonde/'+yyyy+'/'+mm+'/'+dd+'/'
-  tmp_dset1_path_B4 = '/wind_datasets/sonde/'+yyB4+'/'+mmB4+'/'+ddB4+'/'
-  tmp_dset1_path_A  = '/wind_datasets/sonde/'+yyA+'/'+mmA+'/'+ddA+'/'
+  tmp_dset1_path    = '/scratch/atmos-nc-dataset/sonde/'+yyyy+'/'+mm+'/'+dd+'/'
+  tmp_dset1_path_B4 = '/scratch/atmos-nc-dataset/sonde/'+yyB4+'/'+mmB4+'/'+ddB4+'/'
+  tmp_dset1_path_A  = '/scratch/atmos-nc-dataset/sonde/'+yyA+'/'+mmA+'/'+ddA+'/'
 
 		# Path/file
 		# ...Current date
@@ -4175,44 +4257,6 @@ def read_sonde(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time
           sfdA_mm  = fdC_mm [iHHA]
           sfdA_dy  = fdC_dy [iHHA]
           sfdA_hr  = fdC_hr [iHHA]
-          sfdA_mn  = fdC_mn [iHHA]
-          sfdA_spd = fdC_spd[iHHA]
-          sfdA_dir = fdC_dir[iHHA]
-          sfdA_prs = fdC_prs[iHHA]
-          sfdA_hgt = fdC_hgt[iHHA]
-          sfdA_slv = fdC_slv
-      
-      tiHHB4 = np.where(((fdC_hr >= (15-ihrB)) * (fdC_hr < 15)))
-      siHHB4 = np.asarray(tiHHB4)
-      iHHB4  = siHHB4.flatten()
-    
-      sfdB_lat = fdC_lat[iHHB4]
-      sfdB_lon = fdC_lon[iHHB4]
-      sfdB_yr  = fdC_yr [iHHB4]
-      sfdB_mm  = fdC_mm [iHHB4]
-      sfdB_dy  = fdC_dy [iHHB4]
-      sfdB_hr  = fdC_hr [iHHB4]
-      sfdB_mn  = fdC_mn [iHHB4]
-      sfdB_spd = fdC_spd[iHHB4]
-      sfdB_dir = fdC_dir[iHHB4]
-      sfdB_prs = fdC_prs[iHHB4]
-      sfdB_hgt = fdC_hgt[iHHB4]
-      sfdB_slv = fdC_slv
-
-      		# append CURRENT to BEFORE
-    if existB == 0:
-      fd_lat = np.append(sfdB_lat,fdC_lat,axis=0)
-      fd_lon = np.append(sfdB_lon,fdC_lon,axis=0)
-      fd_yr  = np.append(sfdB_yr ,fdC_yr ,axis=0)
-      fd_mm  = np.append(sfdB_mm ,fdC_mm ,axis=0)
-      fd_dy  = np.append(sfdB_dy ,fdC_dy ,axis=0)
-      fd_hr  = np.append(sfdB_hr ,fdC_hr ,axis=0)
-      fd_mn  = np.append(sfdB_mn ,fdC_mn ,axis=0)
-      fd_prs = np.append(sfdB_prs,fdC_prs,axis=0)
-      fd_hgt = np.append(sfdB_hgt,fdC_hgt,axis=0)
-      fd_spd = np.append(sfdB_spd,fdC_spd,axis=0)
-      fd_dir = np.append(sfdB_dir,fdC_dir,axis=0)
-  
       nsondes = np.append(nsondesB,nsondesC,axis=0)
       nlevels = np.append(sfdB_slv,fdC_slv,axis=0)
       ngrps   = np.append(ngrpsB,ngrpsC,axis=0)
@@ -4323,8 +4367,8 @@ def read_sonde(path_prefix,yyyymmddhh,dateB4,dateA,bool_qc,dsetflag,runtype,time
 	# check height units and convert to km
   if max(d_hgt) > 1000.:
     d_hgt = d_hgt/1000.
-
-	# Return variables to MAIN
+ 
+# Return variables to MAIN
   return d_lat,d_lon,d_yr,d_mm,d_dy,d_hr,d_mn,d_hgt,d_prs,indexes1,qc_list,dset1_src,nsondes,nlevels,ngrps,d_spd,d_dir
   
 #===============================================================================================

@@ -64,7 +64,7 @@ from read_data import read_index_file
 from read_data import read_aeolus
 from read_data import read_aircraft
 from read_data import read_amv_ncep
-from read_data import read_loon
+#from read_data import read_loon
 from read_data import read_sonde
 
 from quality_controls import qc_winds
@@ -488,6 +488,9 @@ while iyy <= int(yyyyE):
           elif driver_name=='Sonde':
             tdrv_lat,tdrv_lon,tdrv_yr,tdrv_mm,tdrv_dy,tdrv_hr,tdrv_mn,tdrv_hgt,tdrv_prs,tindexesD,tqc_drv_list,tdrv_src,tnsondes,tnlevels,tngroups,tdrv_spd,tdrv_dir = read_sonde(archive_parent,yyyymmddhh,dateB4,dateA,bool_drv_qc,"drv",runtype,tim_max[j],idxs)
             del tindexesD,tqc_drv_list,tdrv_src,tnsondes,tnlevels,tngroups
+          elif driver_name=='DAWN':
+            tdrv_lat,tdrv_lon,tdrv_yr,tdrv_mm,tdrv_dy,tdrv_hr,tdrv_mn,tdrv_hgt,tdrv_prs,tindexesD,tqc_drv_list,tdrv_src,tdrv_hgt,tdrv_spd,tdrv_dir = read_DAWN(archive_parent,yyyymmddhh,dateB4,dateA,bool_drv_qc,"drv",runtype,tim_max[j],idxs)
+            del tindexesD,tqc_drv_list,tdrv_src,tdrv_azm,tdrv_elv
           else:
             print("ERROR: Driver dataset not defined!")
             sys.exit()
@@ -541,9 +544,9 @@ while iyy <= int(yyyyE):
             elif d_names=='AMV_NCEP':
               t_lat,t_lon,t_yr,t_mm,t_dy,t_hr,t_mn,t_hgt,t_prs,t_indexes,t_qc_dset_list,t_src,t_satname,t_wcm,t_ham,t_spd,t_dir = read_amv_ncep(archive_parent,yyyymmddhh,dateB4,dateA,bool_dset_qc,pct,qi_choice,"dep",runtype,tim_max[j],idxs)
               del t_satname,t_ham
-            elif d_names=='Loon':
-              t_lat,t_lon,t_yr,t_mm,t_dy,t_hr,t_mn,t_hgt,t_prs,t_indexes,t_qc_dset_list,t_src,t_azm,t_elv,t_spd,t_dir = read_loon(archive_parent,yyyymmddhh,dateB4,dateA,bool_dset_qc,"dep",runtype,tim_max[j],idxs)
-              del t_azm,t_elv
+#            elif d_names=='Loon':
+#              t_lat,t_lon,t_yr,t_mm,t_dy,t_hr,t_mn,t_hgt,t_prs,t_indexes,t_qc_dset_list,t_src,t_azm,t_elv,t_spd,t_dir = read_loon(archive_parent,yyyymmddhh,dateB4,dateA,bool_dset_qc,"dep",runtype,tim_max[j],idxs)
+#              del t_azm,t_elv
             elif d_names=='Sonde':
 		# RADIOSONDE data are 2D (except for lat, lon, dates/times): [nsondes, nlevels]
 		# 	nsondes = number of sondes
@@ -551,6 +554,8 @@ while iyy <= int(yyyyE):
 		# nsondes, nlevels are used to find collocated indices that pertain to original data file
               t_lat,t_lon,t_yr,t_mm,t_dy,t_hr,t_mn,t_hgt,t_prs,t_indexes,t_qc_dset_list,t_src,nsondes,nlevels,ngroups,t_spd,t_dir = read_sonde(archive_parent,yyyymmddhh,dateB4,dateA,bool_dset_qc,"dep",runtype,tim_max[j],idxs)
               del nsondes,nlevels,ngroups
+            elif d_names=='DAWN':
+              t_lat,t_lon,t_yr,t_mm,t_dy,t_hr,t_mn,t_hgt,t_prs,t_indexes,t_qc_dset_list,t_src,t_spd,t_dir = read_DAWN(archive_parent,yyyymmddhh,dateB4,dateA,bool_dset_qc,"dep",runtype,tim_max[j],idxs)
             else:
               print("ERROR: Dependent dataset "+str(i)+" ("+d_names+") cannot be read by this program! Please add function to read_input_datasets module and try again.")
               sys.exit()

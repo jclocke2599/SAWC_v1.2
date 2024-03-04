@@ -1,3 +1,4 @@
+
 ###########################################################################
 #
 # PYTHON 3 FUNCTIONS FOR match_dependencies
@@ -80,6 +81,7 @@ from netCDF4 import Dataset #.............................................. netC
 def fix_lon(lon):
     idx = np.where(lon < 0.)
     lon[idx] = lon[idx] + 360.
+    
     return lon
 # Fix year: Some dates may include an hour-catetory with values > 23.
 #           This can happen when, for example, observations in a dataset
@@ -98,23 +100,31 @@ def fix_lon(lon):
 #    OUTPUTS:
 #            yr .............................. year (corrected) [n]
 #
+
 def fix_yr(yr,mm,dy,hr,mn):
-    idx = np.where(hr>=24.) #.......................................... Indices where hr=24
-    if (np.size(idx)>0):
-        for i in idx[0]:
-            d = dt.datetime( #......................................... Correct datetime (hr=23 + 1 hr)
+
+ idx = []
+
+ for j in hr:
+  if float(j) >= 24.: 
+   idx.append(j)
+    
+#    idx = np.where(hr>=24) #.......................................... Indices where hr=24
+  if (np.size(idx)>0):
+       for i in idx[0]:
+           d = dt.datetime( #......................................... Correct datetime (hr=23 + 1 hr)
                              int(yr[i]) , 
                              int(mm[i]) , 
                              int(dy[i]) , 
                              23         ,
                              int(mn[i])
                            ) + dt.timedelta(hours=int(hr[i])-23)
-            yr[i] = float(d.year)
-            mm[i] = float(d.month)
-            dy[i] = float(d.day)
-            hr[i] = float(d.hour)
-            mn[i] = float(d.minute)
-    return yr
+           yr[i] = float(d.year)
+           mm[i] = float(d.month)
+           dy[i] = float(d.day)
+           hr[i] = float(d.hour)
+           mn[i] = float(d.minute)
+  return yr
 # Fix month Some dates may include an hour-catetory with values > 23.
 #           This can happen when, for example, observations in a dataset
 #           cross over to the next day and an hour = 24 or 25 is used as
@@ -133,8 +143,12 @@ def fix_yr(yr,mm,dy,hr,mn):
 #            mm .............................. month (corrected) [n]
 #
 def fix_mm(yr,mm,dy,hr,mn):
-    idx = np.where(hr==24.) #.......................................... Indices where hr=24
-    if (np.size(idx)>0):
+ for l in hr:
+  if float(l) == 24.:
+   idx.append(l)
+
+ #   idx = np.where(hr==24.) #.......................................... Indices where hr=24
+   if (np.size(idx)>0):
         for i in idx[0]:
             d = dt.datetime( #......................................... Correct datetime (hr=23 + 1 hr)
                              int(yr[i]) , 
@@ -148,7 +162,7 @@ def fix_mm(yr,mm,dy,hr,mn):
             dy[i] = float(d.day)
             hr[i] = float(d.hour)
             mn[i] = float(d.minute)
-    return mm
+ return mm
 # Fix day:  Some dates may include an hour-catetory with values > 23.
 #           This can happen when, for example, observations in a dataset
 #           cross over to the next day and an hour = 24 or 25 is used as
@@ -167,7 +181,11 @@ def fix_mm(yr,mm,dy,hr,mn):
 #            dy .............................. day (corrected) [n]
 #
 def fix_dy(yr,mm,dy,hr,mn):
-    idx = np.where(hr==24.) #.......................................... Indices where hr=24
+  for k in hr:
+   if float(k) == 24.:
+    idx.append(k)
+
+#    idx = np.where(hr==24.) #.......................................... Indices where hr=24
     if (np.size(idx)>0):
         for i in idx[0]:
             d = dt.datetime( #......................................... Correct datetime (hr=23 + 1 hr)
@@ -182,7 +200,7 @@ def fix_dy(yr,mm,dy,hr,mn):
             dy[i] = float(d.day)
             hr[i] = float(d.hour)
             mn[i] = float(d.minute)
-    return dy
+  return dy
 # Fix hour: Some dates may include an hour-catetory with values > 23.
 #           This can happen when, for example, observations in a dataset
 #           cross over to the next day and an hour = 24 or 25 is used as
@@ -201,7 +219,11 @@ def fix_dy(yr,mm,dy,hr,mn):
 #            hr .............................. hour (corrected) [n]
 #
 def fix_hr(yr,mm,dy,hr,mn):
-    idx = np.where(hr==24.) #.......................................... Indices where hr=24
+  for m in hr:
+   if float(m) == 24.:
+    idx.append(m)
+
+#    idx = np.where(hr==24.) #.......................................... Indices where hr=24
     if (np.size(idx)>0):
         for i in idx[0]:
             d = dt.datetime( #......................................... Correct datetime (hr=23 + 1 hr)
@@ -216,7 +238,7 @@ def fix_hr(yr,mm,dy,hr,mn):
             dy[i] = float(d.day)
             hr[i] = float(d.hour)
             mn[i] = float(d.minute)
-    return hr
+  return hr
 # Fix minute: Some dates may include an hour-catetory with values > 23.
 #           This can happen when, for example, observations in a dataset
 #           cross over to the next day and an hour = 24 or 25 is used as
@@ -235,7 +257,11 @@ def fix_hr(yr,mm,dy,hr,mn):
 #            mn .............................. minute (corrected) [n]
 #
 def fix_mn(yr,mm,dy,hr,mn):
-    idx = np.where(hr==24.) #.......................................... Indices where hr=24
+  for n in hr:
+   if float(n) == 24.:
+    idx.append(n)
+
+  #  idx = np.where(hr==24.) #.......................................... Indices where hr=24
     if (np.size(idx)>0):
         for i in idx[0]:
             d = dt.datetime( #......................................... Correct datetime (hr=23 + 1 hr)
@@ -250,7 +276,7 @@ def fix_mn(yr,mm,dy,hr,mn):
             dy[i] = float(d.day)
             hr[i] = float(d.hour)
             mn[i] = float(d.minute)
-    return mn
+  return mn
 #
 ###########################################################################
 #
@@ -315,7 +341,7 @@ def match_obs(
                parallelize_set_1 ,	# flag indicating which dataset is the dask-array (parallelized) (False=DRIVER, or True=DEPENDENTS)  
                usePH			# integer indicating which dependent datasets each array space belongs to
              ):
-
+   
 	# Create output arrays
     results = np.nan * np.ones((np.size(latd),n_max,6),dtype=latd.dtype)  #... List of matching indices, dim size = 6 (for the following 6 vars) (initialized to nan)
     matches = np.nan * np.ones((np.size(latd),n_max),dtype=latd.dtype)    #... List of numpy indices matching dask ob (initialized to nan)
@@ -614,7 +640,7 @@ def obs_match_3d(
                   usePH
                 ):
 		# NOTE: *_1_np = dependent datasets | *_2_np = driver dataset 
-
+    
     #######################################################################
     #
     master_clock_begin = time.time() #..................................... Beginning-time of function-call
@@ -639,6 +665,7 @@ def obs_match_3d(
     # Define chunk-size of parallelized arrays by dividing (as equally as possible)
     # the data in the parallelized set among nproc processors
     #
+    print("Beginning chunk size") 
     if (np.size(lat_1_np) >= np.size(lat_2_np)):
         parallelize_set_1 = True #......................................... Flag: set-1 is dask, set-2 is numpy
         chksize=int(np.ceil(np.size(lat_1_np)/nproc)) #.................... Chunk-size
@@ -1032,3 +1059,4 @@ def match_lists_to_netCDF(names,vals,nc_out_filenm,longnames,units,missing,src_p
     return
 
 ###########################################################################
+
