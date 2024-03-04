@@ -74,8 +74,9 @@ from match_dependencies import match_lists_to_netCDF
 from read_data import read_aeolus
 from read_data import read_aircraft
 from read_data import read_amv_ncep
-from read_data import read_loon
+#from read_data import read_loon
 from read_data import read_sonde
+from read_data import read_DAWN
 
 ##############################################
 print("========================================")
@@ -242,10 +243,10 @@ for i in range(ndependent_datasets):
 #=============================================
 # Full date arrays
 
-mmARR 		= [ "01","02","03","04","05","06","07","08","09","10","11","12" ]
-ddARRend 	= [ "31","28","31","30","31","30","31","31","30","31","30","31" ]
-ddARR 		= [ "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31" ]
-hhARR		= [ "00","06","12","18" ]
+mmARR 		= [ "01","02","03","04","05","06","07","08","09","10","11","12"]
+ddARRend 	= [ "31","28","31","30","31","30","31","31","30","31","30","31"]
+ddARR 		= [ "01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"]
+hhARR		= [ "00","06","12","18"]
 
 #=============================================
 # Find date before (B4) and date after (A) current date
@@ -337,10 +338,12 @@ elif driver_name=='Aircraft':
   drv_lat,drv_lon,drv_yr,drv_mm,drv_dy,drv_hr,drv_mn,drv_hgt,drv_prs,indexesD,qc_drv_list,drv_src,drv_spd,drv_dir = read_aircraft(archive_parent,yyyymmddhh,dateB4,dateA,bool_drv_qc,"drv",runtype,tim_max_str,idxs)
 elif driver_name=='AMV_NCEP':
   drv_lat,drv_lon,drv_yr,drv_mm,drv_dy,drv_hr,drv_mn,drv_hgt,drv_prs,indexesD,qc_drv_list,drv_src,drv_satname,drv_wcm,drv_ham,drv_spd,drv_dir = read_amv_ncep(archive_parent,yyyymmddhh,dateB4,dateA,bool_drv_qc,pct_drv,qi_choice_drv,"drv",runtype,tim_max_str,idxs)
-elif driver_name=='Loon':
-  drv_lat,drv_lon,drv_yr,drv_mm,drv_dy,drv_hr,drv_mn,drv_hgt,drv_prs,indexesD,qc_drv_list,drv_src,drv_hgt,drv_azm,drv_elv,drv_spd,drv_dir = read_loon(archive_parent,yyyymmddhh,dateB4,dateA,bool_drv_qc,"drv",runtype,tim_max_str,idxs)
+#elif driver_name=='Loon':
+#  drv_lat,drv_lon,drv_yr,drv_mm,drv_dy,drv_hr,drv_mn,drv_hgt,drv_prs,indexesD,qc_drv_list,drv_src,drv_hgt,drv_azm,drv_elv,drv_spd,drv_dir = read_loon(archive_parent,yyyymmddhh,dateB4,dateA,bool_drv_qc,"drv",runtype,tim_max_str,idxs)
 elif driver_name=='Sonde':
   drv_lat,drv_lon,drv_yr,drv_mm,drv_dy,drv_hr,drv_mn,drv_hgt,drv_prs,indexesD,qc_drv_list,drv_src,nsondes,nlevels,ngroups,drv_spd,drv_dir = read_sonde(archive_parent,yyyymmddhh,dateB4,dateA,bool_drv_qc,"drv",runtype,tim_max_str,idxs)
+elif driver_name=='DAWN':
+  drv_lat,drv_lon,drv_yr,drv_mm,drv_dy,drv_hr,drv_mn,drv_hgt,indexesD,qc_drv_list,drv_src,drv_spd,drv_dir = read_DAWN(archive_parent,yyyymmddhh,dateB4,dateA,bool_drv_qc,"drv",runtype,tim_max_str,idxs)
 else:
   print("ERROR: Driver dataset not defined!")
   sys.exit()
@@ -387,6 +390,8 @@ for i in range(ndependent_datasets):
 	# 	nlevels = number of vertical levels per sonde
 	# nsondes, nlevels are used to find collocated indices that pertain to original data file
     t_lat,t_lon,t_yr,t_mm,t_dy,t_hr,t_mn,t_hgt,t_prs,t_indexes,t_qc_dset_list,t_src,nsondes,nlevels,ngroups,t_spd,t_dir = read_sonde(archive_parent,yyyymmddhh,dateB4,dateA,bool_dset_qc[i],"dep",runtype,tim_max_str,idxs)
+  elif dependent_names[i]=='DAWN':
+    t_lat,t_lon,t_yr,t_mm,t_dy,t_hr,t_mn,t_hgt,t_prs,t_indexes,t_qc_dset_list,t_src,t_spd,t_dir = read_DAWN(archive_parent,yyyymmddhh,dateB4,dateA,bool_dset_qc[i],"dep",runtype,tim_max_str,idxs)
   else:
     print("ERROR: Dependent dataset "+str(i)+" ("+dependent_names[i]+") cannot be read by this program! Please add function to read_input_datasets module and try again.")
     sys.exit()

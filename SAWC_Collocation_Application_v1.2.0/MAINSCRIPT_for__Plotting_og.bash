@@ -46,15 +46,15 @@
 	#`````````````````````````````````````
 	# Start Date
 yyyyS="2022"
-mmS="09"
-ddS="15"
-hhS="18"
+mmS="01"
+ddS="02"
+hhS="00"
 
 	#`````````````````````````````````````
 	# End Date
 yyyyE="2022"
-mmE="09"
-ddE="15"
+mmE="01"
+ddE="04"
 hhE="18"
 
 #----------------------------------------------
@@ -66,7 +66,7 @@ hhE="18"
         #                then
         #                archive_parent = /Full/Path/To/
         #
-archive_parent=/
+archive_parent=/home/jlocke/
 
 	# Set home path 'dir_home': This is the current working directory (i.e., where this script is located)
 dir_home="/home/jlocke/SAWC_v1.2/SAWC_Collocation_Application_v1.2.0/"
@@ -88,13 +88,13 @@ echo 'INPUT DIRECTORY = '${dir_in}
 		#	dsets = sring array containing dependent dataset names
 		#	dset_qc = string array indicating whether QC was applied to each dataset during collocation. 
 		#		Options: 'QC' if qc was applied; 'NoQC' if qc was not applied
-dep_dset=("AMV_NCEP")
+dep_dset=("Aircraft" "AMV_NCEP" "Sonde")
 
-dep_dset_qc=("NoQC")
+dep_dset_qc=("NoQC" "NoQC" "NoQC")
 
 		# This is the portion of the filename after the DATE. Include all punctuation.
 		# This should be the same for ALL index files.
-drv_dset='Sonde'
+drv_dset='Aeolus_MieCloud_Orig'
 #drv_dset='Aeolus_RayClear_ReprocB11'
 
 drv_dset_qc='NoQC'

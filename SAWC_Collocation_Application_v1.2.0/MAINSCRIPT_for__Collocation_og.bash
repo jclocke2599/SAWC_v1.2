@@ -48,13 +48,13 @@ yyyy=2022
 
 	#`````````````````````````````````````
 	# Month
-mm=(09)
+mm=(01)
 
 	#`````````````````````````````````````
 	# Day array - choose ONE, comment out the rest
 
 	# Months with 31 days: Jan, Mar, May, Jul, Aug, Oct, Dec
-ddarr=(15)  #(01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31)
+ddarr=(02 03 04)  #(01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31)
 	# Months with 30 days: Apr, Jun, Sep, Nov
 #ddarr=(01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30)
 	# Feb - LEAP YEAR
@@ -82,7 +82,7 @@ echo 'OUTPUT DIRECTORY = '${dir_out}
 	#	         then 
 	#	 	 archive_parent = /Full/Path/To/
 	#
-archive_parent=/
+archive_parent=/home/jlocke/
 
 #----------------------------------------------
 # Set datasets to collocate
@@ -103,7 +103,7 @@ archive_parent=/
 	#		3. BEWARE! While the order of the DEPENDENT dataset names does not matter, the program assumes that 
 	#		   the 'qc_flags' order corresponds to the order of 'dataset_names'.
 	
-dataset_names=("Sonde" "AMV_NCEP")
+dataset_names=("Aeolus" "Aircraft" "AMV_NCEP" "Sonde")
 	
 AMV_center="none"		# Not to be changed.
 
@@ -124,7 +124,7 @@ hgt_max=(1.0 1.0 1.0 1.0)                  # collocation height difference maxim
 #	Set to 0 if no QC is to be applied
 #	Set to 1 if QC is to be applied
 
-qc_flags=(0 0)
+qc_flags=(0 0 0 0)
 
 #----------------------------------------------
 # Set quality indicator (QI) in percent (%) for AMV dataset(s)
@@ -141,7 +141,7 @@ qc_flags=(0 0)
 
 #amv_qi_flags=\"0\"
 #amv_qi_flags=\"60\"
-amv_qi_flags=\"0\"
+amv_qi_flags=\"80\"
 
 #----------------------------------------------
 # Set quality indicator (QI) choice(s)
